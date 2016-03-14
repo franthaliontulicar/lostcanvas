@@ -48,7 +48,19 @@ public class DrawDemo
             pen.turn(10);
         }
     }
+    
+     public void drawTriangle(int x, int y)
+    {
+        Pen pen = new Pen(x,y, myCanvas);
+        pen.setColor(Color.green);
 
+        for (int i=0; i<36; i++) {
+            Triangle(pen);
+            pen.turn(x);
+        }
+    }
+    
+    
     /**
      * Draw a square in the pen's color at the pen's location.
      */
