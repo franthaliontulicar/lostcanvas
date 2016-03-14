@@ -62,13 +62,39 @@ public class DrawDemo
     
     public void drawPentagon()
     {
-        Pen pen = new Pen(120, 160, myCanvas);
+        Pen pen = new Pen(110, 150, myCanvas);
         pen.setColor(Color.GREEN);
 
         for (int i=0; i<5; i++) {
             pen.move(80);
             pen.turn(-72);
         }
+    }
+    
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(220, 220, myCanvas);
+        pen.setColor(Color.BLUE);
+
+        for (int i=0; i<n; i++) {
+            pen.move(60);
+            pen.turn((-360/n));
+        }
+    }
+    
+    public void drawSpiral(){
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.ORANGE);
+        int size = 10;
+        
+        for (int i = 0; i < 30; i++) {
+            pen.move(size); 
+            pen.turn(90);
+            pen.move(size);
+            pen.turn(90);
+            size += 10;
+        }
+    
     }
     
     /**
