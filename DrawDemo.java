@@ -54,12 +54,22 @@ public class DrawDemo
         Pen pen = new Pen(x,y, myCanvas);
         pen.setColor(Color.green);
 
-        for (int i=0; i<36; i++) {
-            Triangle(pen);
-            pen.turn(x);
+        for (int i=0; i<3; i++) {
+             pen.move(100);
+             pen.turn(-120);
         }
     }
     
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(120, 160, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i=0; i<5; i++) {
+            pen.move(80);
+            pen.turn(-72);
+        }
+    }
     
     /**
      * Draw a square in the pen's color at the pen's location.
