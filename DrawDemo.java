@@ -77,25 +77,26 @@ public class DrawDemo
         pen.setColor(Color.BLUE);
 
         for (int i=0; i<n; i++) {
-            pen.move(60);
+            pen.move(90);
             pen.turn((-360/n));
         }
     }
     
-    public void drawSpiral(){
-        Pen pen = new Pen(250, 200, myCanvas);
+     public void drawSpiral(){
+        Pen pen = new Pen(200, 100, myCanvas);
         pen.setColor(Color.ORANGE);
-        int size = 10;
+        int size = 5;
         
         for (int i = 0; i < 30; i++) {
             pen.move(size); 
             pen.turn(90);
             pen.move(size);
             pen.turn(90);
-            size += 10;
+            size += 5;
         }
     
     }
+   
     
     /**
      * Draw a square in the pen's color at the pen's location.
